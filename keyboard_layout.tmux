@@ -12,11 +12,11 @@ length_config='@keyboard_layout:length'
 get_keyboard_layout="$CURRENT_DIR/scripts/get_keyboard_layout.sh"
 
 interpolate() {
-    local -r status=$1
-    local -r keyboard_layout=$2
+    local -r option=$1
+    local -r replacement=$2
     local -r option_scope=${3#-}
-    local -r option_value=$(tmux show-option -"$option_scope"qv "$status")
-    tmux set-option -"$option_scope"q "$status" "${option_value/$place_holder/$keyboard_layout}"
+    local -r option_value=$(tmux show-option -Aqv "$option")
+    tmux set-option -"$option_scope"q "$option" "${option_value/$place_holder/$replacement}"
 }
 
 main() {
