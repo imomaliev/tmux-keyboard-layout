@@ -29,7 +29,7 @@ $ git clone https://github.com/imomaliev/tmux-keyboard-layout.git ~/clone/path
 Add this line to your .tmux.conf:
 
 ```tmux.conf
-run-shell ~/clone/path/tmux-keyboard-layout.tmux
+run-shell ~/clone/path/keyboard-layout.tmux
 ```
 
 Reload TMUX environment with:
