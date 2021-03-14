@@ -40,19 +40,19 @@ $ tmux source-file ~/.tmux.conf
 
 ### Configurations
 
-#### Set layout on per session scope
+#### Change option scope (default g - global)
 
 Follows same rules as `set-option`
 
-For example to set for session scope
+**Special case**: To set scope to session use `'-'`, because by default session scope used when no param is provided.
 
 ```tmux.conf
-set -g @keyboard_layout:option_scope ''
+set -g @keyboard_layout:option_scope '-'
 ```
 
-#### Make output shorter
+#### Change output length (default 16)
 
-For example make output length equal to 2
+Make output length equal to 2
 
 ```tmux.conf
 set -g @keyboard_layout:length 2
