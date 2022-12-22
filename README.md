@@ -8,6 +8,11 @@ Plugin that shows current keyboard layout.
 set -g status-right '#{keyboard_layout}'
 ```
 
+### Dependencies
+- Common dependencies: BASH, cut, tr,
+- For Linux: xkblayout
+- For MacOS: HIToolbox.framework
+
 ### Installation with Tmux Plugin Manager (recommended)
 
 Add plugin to the list of TPM plugins:
